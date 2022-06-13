@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html id="html" lang="pl">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Vital Cars Wrocław</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <meta name="description" content="samochody używane, sprzedaż aut Wrocław" />
+  <meta name="keywords" content="komis, auto, samochód, samochody, używane, auta osobowe, sprzedam" />
+  <meta property="og:site_name" content="vitalcars.wroclaw.pl" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/form.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&family=Montserrat:wght@500;700&family=Roboto:wght@700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="shortcut icon" href="./img/vitalCarsFavicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+  <script src="https://kit.fontawesome.com/9704b9c5c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="82">
+  <nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100" style="background-color: #ffffff">
+    <div class="container ">
+      <a class="navbar-brand" id="closeModalLogo" href="index.html"><img src="./img/vitalCars.png"
+          alt="logo Vital Cars" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" id="closeModalNavMainpage" href="/index.html">Strona główna</a>
+          <a class="nav-link" href="./sites/warranty.html">Gwarancja</a>
+          <a class="nav-link" href="./sites/about-us.html">O nas</a>
+          <a class="nav-link" href="./sites/contact.html">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="intro wrapper2 style1 fullscreen fade-up">
+
+    <div class="heroBanner">
+      <video class="bgcVideo" src="./video/vitalcars.mp4" autoplay muted loop></video>
+      <div class="vital-cars-text-center">
+        <h1 class="heroTitle">Vital Cars Wrocław</h1>
+        <h2>samochody używane</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="car-offer section-padding ">
+
+    <h2 id="featuredOffers" class="p-4">
+      <div class="text-center">Polecane oferty</div>
+    </h2>
+
+    </div>
+    <div class="container ">
+
+      <!-- car modal is here -->
+
+      <div id="CarModal" class="modal fade">
+
+        <div class="modal-dialog modal-fullscreen">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <button id="closeModalCross" type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <section id="deleteGridSestionMedia" class="product">
+                <div id="deleteCarSestionMedia" class="product__photo">
+                  <div class="photo-container">
+                    <div class="photo-main">
+
+                      <img src="./img/cars/carModalSVGnoshadow.svg" alt="samochód jako okładka zamówienia">
+                    </div>
+
+                  </div>
+                </div>
+                <div id="deleteInfoSestionMedia" class="product__info">
+                  <div class="title">
+                    <h1>Skonfiguruj swój zakup</h1>
+                  </div>
+
+                  <div class="carschoosemodal">
+                    <p class="result"> </p>
+                   
+
+                    <form class="payment-choice">
+                      <input id="leasingId" class="selectLeasing confirm" onClick="save()" type="radio" name="payment"
+                        value="wartość" />
+
+                      <p>Leasing</p>
+                      <input id="CaschId" class="selectCash confirm" onClick="save2()" type="radio" name="payment"
+                        value="wartość" />
+                      <p>Gotówka</p>
+                    </form>
+                    <p class="errorMessageCheckbox errorMessage hidden"> Wszystkie pola muszą być wypełnione ! :)</p>
+                    <form class="personal-data">
+                      <div class="personal">
+                        <p>Podaj swoje imie: </p><input class="name personal" id="nameLocalSave" type="text"
+                          placeholder="Tutaj wpisz imie..." />
+                        <p class="errorMessageName errorMessage hidden"> Musisz wpisać swoje imię ! :)</p>
+                        <p>Podaj swoje nazwisko: </p>
+                        <input class="surname personal" id="surnameLocalSave" type="text"
+                          placeholder="A tu nazwisko... " />
+                        <p class="errorMessageSurname errorMessage hidden">Nazwisko też jest wymagane :)</p>
+                      </div>
+
+                      <div class="date">
+                        <p>Podaj datę dostawy auta: </p>
+
+                        <input id="car-date-picker" type="date" autocomplete="off" />
+
+                      </div>
+                      <div>
+
+
+                      </div>
+                    </form>
+                  </div>
+                  <p>Dobierz akcesoria</p>
+                  <div class="form-check form-switch">
+                    <input value="950" class="form-check-input tires checkbox" type="checkbox"
+                      id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Komplet opon zimowych - <span>950
+                        zł</span></label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input value="300" class="form-check-input mat checkbox" type="checkbox"
+                      id="flexSwitchCheckDefault2">
+                    <label class="form-check-label" for="flexSwitchCheckDefault2">Zestaw dywaników - <span>300
+                        zł</span></label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input value="100" class="form-check-input wipers checkbox" type="checkbox"
+                      id="flexSwitchCheckDefault3">
+                    <label class="form-check-label" for="flexSwitchCheckDefault3">Nowe wycieraczki - <span>100
+                        zł</span></label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input value="25" class="form-check-input liquid checkbox" type="checkbox"
+                      id="flexSwitchCheckDefault4">
+                    <label class="form-check-label" for="flexSwitchCheckDefault4">Płyn do spryskiwaczy - <span>25
+                        zł</span></label>
+                  </div>
+                  <div class="final-price">Finalna cena to: <span value="0" class="finalPrice"
+                      id="final-price-span"></span></div>
+
+                </div>
+              </section>
+
+
+            </div>
+            <div id="modal-footer-Small-Media" class="modal-footer">
+              <button id="buttonexit" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Powrót do wyboru
+                aut</button>
+              <button type="button" class="btn btn-primary btnConfirm confirm-validation">Potwierdzam zakup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row no-gutters mb-4">
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+
+            <img class="img-fluid"
+                src="./img/cars/bmw 318 e91.webp" alt="bmw" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block ">BMW 318d Touring E91</strong></a>2010<span> /
+              </span>2000 cm<sup>3</sup><span> / </span>210000 km<span>
+                / </span>Kombi
+              <p id="price1">23 000 zł</p>
+              <button type="button" class="btn btn-primary selectBmw" data-bs-toggle="modal" data-bs-target="#CarModal">
+                Wybieram
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid "
+                src="./img/cars/Mercedes E Klasa biały.webp" alt="biały mercedes e klasa" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Mercedes E Klasa </strong></a>2012<span> / </span>2
+              200 cm<sup>3</sup><span> / </span>290000 km<span>
+                / </span>Sedan
+              <p id="price2">34 5900 zł</p>
+              <button type="button" class="btn btn-primary selectMerc" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/skoda octavia III 20.webp" alt="skoda octavia III" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Skoda Octavia MK3</strong></a>2016<span> / </span>2
+              000 cm<sup>3</sup><span> / </span>155000 km<span>
+                / </span>Kombi
+              <p id="price3">65 000 zł</p>
+              <button type="button" class="btn btn-primary selectSkoda" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/fiat 126p grey.webp" alt="fiat 126p koloru szarego" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Fiat 126p FL</strong></a>1988<span> / </span>650
+              cm<sup>3</sup><span> / </span>380000 km<span>
+                / </span>SUV
+              <p id="price4">9 000 zł</p>
+              <button type="button" class="btn btn-primary selectFiat" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters mb-4">
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/kia.webp" alt="kia" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Kia Sportage 2.0</strong></a>2013<span> /
+              </span>1998 cm<sup>3</sup><span> / </span>176000 km<span>
+                / </span>SUV
+              <div id="price5">56 000 zł</div>
+              <button type="button" class="btn btn-primary selectKia" data-bs-toggle="modal" data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/opel astra.webp" alt="opel astra" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Opel Astra J 1.7 CDTI </strong></a>2012<span> /
+              </span>1686 cm<sup>3</sup><span> / </span>160000 km<span>
+                / </span>Sedan
+              <div id="price6">24 000 zł</div>
+              <button type="button" class="btn btn-primary selectOpel" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/porshe.webp" alt="porshe" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">Porsche Panamera 4S PDK</strong></a>2010<span> /
+              </span>4806 cm<sup>3</sup><span> / </span>190000 km<span>
+                / </span>Sedan
+              <div id="price7">120 000 zł</div>
+              <button type="button" class="btn btn-primary selectPorsche" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="car-card-dimensions col-12 col-md-6 col-lg-3">
+          <div class="border m-2 h-100 description">
+            <img class="img-fluid"
+                src="./img/cars/renault.webp" alt="renault" /></a>
+            <div class="p-3">
+              <strong class="pb-2 d-block">RENAULT MEGANE III</strong></a>2010<span> /
+              </span>1500 cm<sup>3</sup><span> / </span>120000 km<span>
+                / </span>Sedan
+              <div id="price8">17 000 zł</div>
+
+              <button type="button" class="btn btn-primary selectRenault" data-bs-toggle="modal"
+                data-bs-target="#CarModal">
+                Wybieram
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- SECTION IMAGE TUNNEL -->
+
+  <section class="hero-tunnel">
+    <div class="hero-txt-tunnel">
+      <h2>Nasze auta pokonają każdą trasę
+      </h2>
+    </div>
+    <div class="hero-img-tunnel"></div>
+  </section>
+
+  <section class="additional-services section-padding">
+    <h2 id="additionalServices" class="p-4">
+      <div class="text-center">Usługi dodatkowe</div>
+    </h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 text-center text-lg-left mb-5">
+          <img src="./img/mainpage/warranty.jpg" alt="Samochody używane z gwarancją" class="img-fluid" />
+          <h3>Gwarancja</h3>
+          <div class="description">
+            <p>
+              Pojazd z Gwarancją od Vical Cars Wrocław to zapewnione
+              bezpieczeństwo, komfort i wygoda podróżowania dla Ciebie oraz
+              całej Twojej rodziny. Zapewniamy darmową pomoc oraz naprawy na
+              terenie całego kraju, a nawet w Europie.
+            </p>
+          </div>
+          <br />
+          <a href="./sites/warranty.html">Dowiedz się więcej
+            <img src="./img/svg/info-circle.svg" class="filter-logo-brown-color" /></a>
+        </div>
+        <div class="col-12 col-lg-4 text-center text-lg-left mb-5">
+          <img src="./img/mainpage/insurance.jpg" alt="Skup, sprzedaż i zamiana" class="img-fluid" />
+          <h3>Oferta ubezpieczeń</h3>
+          <div class="description">
+            <p>
+              W Vital Cars Wrocław przy zakupie auta możesz nabyć
+              ubezpieczenie OC i AC od kilkunastu ubezpieczycieli i każde z
+              nich będzie w korzystnej cenie.
+            </p>
+          </div>
+          <br />
+          <a href="#">
+            Dowiedz się więcej
+            <img src="./img/svg/info-circle.svg" class="filter-logo-brown-color" />
+          </a>
+        </div>
+        <div class="col-12 col-lg-4 text-center text-lg-left mb-5">
+          <img src="./img/mainpage/finance.jpg" alt="Korzystne finansowanie" class="img-fluid" />
+          <h3>Finansowanie</h3>
+          <div class="description">
+            <p>
+              W związku z długoletnią współpracą z najpopularniejszymi bankami
+              w Polsce, jesteśmy w stanie zaproponować Ci najkorzystniejsze
+              warunki kredytowania aut.
+            </p>
+          </div>
+
+          <br />
+          <a href="#">
+            Dowiedz się więcej
+
+            <img src="./img/svg/info-circle.svg" class="filter-logo-brown-color" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="why-us section-padding">
+    <div class="text-center">
+      <h2 id="whyBuy">Dlaczego warto kupić od nas auto?</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 mb-3" data-aos="zoom-in" data-aos-delay="100">
+            <img src="./img/svg/car-repair-svgrepo-com.svg" class="filter-logo-brown-color" />
+            <h3>Sprawdzone auta</h3>
+            <div class="description">
+              <p>
+                Wszystkie nasze auta są solidnie diagnozowane przed
+                wyswatawieniem na sprzedaż
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3" data-aos="zoom-in" data-aos-delay="200">
+            <img src="./img/svg/sell-company-sell-sale-company-svgrepo-com.svg" class="filter-logo-brown-color" />
+
+            <h3>Rzetelna firma</h3>
+            <div class="description">
+              <p>Sprzedajemy samochody od kilkudziesięciu lat</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3" data-aos="zoom-in" data-aos-delay="300">
+            <img src="./img/svg/two-cars-in-line-svgrepo-com.svg" class="filter-logo-brown-color" />
+            <h3>Szeroka oferta aut</h3>
+            <div class="description">
+              <p>Posiadamy w sprzedaży ponad 1000 samochodów</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 px-4" data-aos="zoom-in" data-aos-delay="400">
+            <img src="./img/svg/guarantor-give-guarantee-give-warranty-svgrepo-com.svg"
+              class="filter-logo-brown-color" />
+            <h3>Dwuletnia gwarancja</h3>
+            <div class="description">
+              <p>
+                Zapewniamy bezpłatną pomoc na terenie całego kraju oraz Europy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews section-padding section white-section" id="reviews">
+    <h2 class="text-center">Opinie</h2>
+    <div class="wrapper">
+      <div class="reviews__boxes">
+        <div class="reviews__box">
+          <div class="reviews__box-img">
+            <img src="./img/opinions/Opinie1_1920.jpg" alt="Wielki Marek " />
+          </div>
+          <div class="reviews__box-info">
+            <div class="reviews__box-quote">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <p class="reviews__box-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo,
+              ab. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Itaque labore
+            </p>
+            <strong>To tez jakaś osoba </strong>
+          </div>
+        </div>
+        <div class="reviews__box">
+          <div class="reviews__box-img">
+            <img src="./img/opinions/Opinie2_1920.jpg" alt="Ksieżna Daria" />
+          </div>
+          <div class="reviews__box-info">
+            <div class="reviews__box-quote">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <p class="reviews__box-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo,
+              ab. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Itaque labore
+            </p>
+            <strong>Wielki Jan Bim</strong>
+          </div>
+        </div>
+        <div class="reviews__box">
+          <div class="reviews__box-img">
+            <img src="./img/opinions/Opinie3_1920.jpg" alt="Jakaś Osoba" />
+          </div>
+          <div class="reviews__box-info">
+            <div class="reviews__box-quote">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <p class="reviews__box-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo,
+              ab. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Itaque labore
+            </p>
+            <strong>Jakaś Osoba</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <section class="about-us-footer">
+      <div class="contact-details p-5">
+        <div class="container">
+          <div class="row">
+            <div class="footer-box col-12 col-md-6 col-lg-3 mb-3">
+              <h3 class="footer-title us">O firmie</h3>
+              <ul class="footer-list">
+                <li class="footer-list-item">
+                  <a class="link" href="#">Strona główna</a>
+                </li>
+                <li class="footer-list-item">
+                  <a class="link" href="#featuredOffers">Polecane oferty</a>
+                </li>
+                <li class="footer-list-item">
+                  <a class="link" href="#additionalServices">Usługi dodatkowe</a>
+                </li>
+                <li class="footer-list-item">
+                  <a class="link" href="#whyBuy">Dlaczego warto kupić</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <h3 class="footer-title">Adres</h3>
+              <p>55-555 Wrocław Ulica Ulicowa 1</p>
+              <h3 class="footer-title mt-5">Zadzwoń teraz</h3>
+              <p>123 123 123</p>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <h3 class="footer-title">Godziny otwarcia:</h3>
+              <div class="row">
+                <div class="col-6">poniedziałek:</div>
+                <div class="col-6"><strong>9:00 - 18:00</strong></div>
+              </div>
+              <div class="row">
+                <div class="col-6">wtorek:</div>
+                <div class="col-6"><strong>9:00 - 18:00</strong></div>
+              </div>
+              <div class="row">
+                <div class="col-6">środa:</div>
+                <div class="col-6"><strong>9:00 - 18:00</strong></div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <h4 class="d-none d-md-block">&nbsp;</h4>
+              <div class="row">
+                <div class="col-6">czwartek:</div>
+                <div class="col-6"><strong>9:00 - 18:00</strong></div>
+              </div>
+              <div class="row">
+                <div class="col-6">piątek:</div>
+                <div class="col-6"><strong>9:00 - 18:00</strong></div>
+              </div>
+              <div class="row">
+                <div class="col-6">sobota:</div>
+                <div class="col-6"><strong>9:00 - 16:00</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5009.436252949443!2d16.98154119333194!3d51.1136606166026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc1e4c99aaef9%3A0x85fe93874cd94d47!2sWy%C5%BCsza%20Szko%C5%82a%20Bankowa%20we%20Wroc%C5%82awiu!5e0!3m2!1spl!2spl!4v1649460929956!5m2!1spl!2spl"
+    width="100%" height="480" frameborder="0" style="border: 0" allowfullscreen="" class="border"></iframe>
+  <div class="container">
+
+  </div>
+
+
+
+  <footer class="footer">
+    <p class="footer__bottom-text">
+      &copy; <span class="footer__year"></span> Vital Cars Wrocław
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="./script/js.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./script/slick.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./script/aos.js"></script>
+  <script type="module" src="./script/cookies.js"></script>
+
+
+</body>
+
+</html>

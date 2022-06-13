@@ -1,0 +1,30 @@
+.container-guarantee{
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .why-us{
+        margin-bottom: 20px;
+
+        @media (min-width: 980px) {
+            margin-top: 95px;
+
+    }}
+    .container-icons{
+        margin-top: 20px;
+
+    }
+    .fs-1{
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .container-guarantee{
+       padding-top: 100px;
+       height: 100%;
+    }
+  }
+
+  

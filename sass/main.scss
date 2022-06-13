@@ -1,0 +1,398 @@
+@import 'colors';
+// @import url(//db.onlinewebfonts.com/c/6be8b78f5eaa571c3fbf3a1908515cf6?family=Adumu);
+@font-face {
+  font-family: Adumu;
+  src: url('../font/Adumu/@font-face/6be8b78f5eaa571c3fbf3a1908515cf6.ttf');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Slab', 'Adumu' sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.section-padding {
+  padding: 60px 0 15px 0;
+
+  h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.wrapper2 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 2000px;
+}
+
+.shadow-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.6s;
+}
+
+nav {
+  z-index: 10000;
+  transition: background-color 0.6s;
+  height: 60px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px rgb(197, 193, 193);
+
+  .nav-link {
+    color: $nav-color;
+    margin-left: 35px;
+    @media (max-width: 991px) {
+      color: $nav-color2;
+      text-shadow: -1px 0 #9f2e25, 0 1px #9f2e25, 1px 0 #9f2e25, 0 -1px #9f2e25;
+      font-size: 1.3em;
+      margin-left: 20px;
+      width: 130px;
+    }
+  }
+  .fa-bars {
+    padding: 10px;
+    color: $nav-color;
+  }
+  a {
+    color: $nav-color;
+  }
+  .nav-link:hover {
+    color: $nav-hover-color;
+  }
+
+  a:hover {
+    color: $nav-hover-color;
+    transition: all 0.2s;
+  }
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    padding-right: 100px;
+  }
+}
+
+.modal {
+  padding-top: 60px;
+
+  button {
+    transform: scale(1.6);
+    margin: 1rem 3.8rem 1rem 3.8rem;
+  }
+}
+
+.car-choice {
+  padding-top: 60px;
+}
+
+.intro {
+  position: relative;
+
+  .heroBanner {
+    margin-bottom: -20px;
+
+    .bgcVideo {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    .vital-cars-text-center {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-family: 'Adumu';
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      color: $logo-yellow-color;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h1 {
+        font-size: 6.5rem;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .navbar-brand {
+    padding-top: 0;
+  }
+
+  .navbar {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .intro .heroBanner .vital-cars-text-center h1 {
+    font-size: 5rem;
+  }
+  .intro .heroBanner .vital-cars-text-center h2 {
+    font-size: 2.2rem;
+  }
+
+  #deleteCarSestionMedia {
+    display: none;
+    margin-left: 20px;
+  }
+
+  #deleteGridSestionMedia {
+    min-width: 350px;
+    display: block;
+  }
+  #deleteInfoSestionMedia {
+    margin-left: 20px;
+  }
+  #modal-footer-Small-Media {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .intro .heroBanner .vital-cars-text-center h1 {
+    font-size: 6rem;
+  }
+  .intro .heroBanner .vital-cars-text-center h2 {
+    font-size: 3rem;
+  }
+
+  .car-offer .car-card-dimensions {
+    margin-bottom: 15px;
+  }
+  #deleteCarSestionMedia {
+    display: none;
+  }
+  #deleteInfoSestionMedia {
+    margin-left: 45px;
+  }
+  #deleteGridSestionMedia {
+transform: scale(1.15);
+    display: block;
+  }
+}
+
+//  SECTION CAR OFFER
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+
+  .btn-primary {
+    margin-left: 10px;
+    transform: scale(1.4);
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+}
+
+.car-offer .img-fluid {
+  width: 100%;
+  height: auto;
+  height: 260px;
+  object-fit: cover;
+}
+
+// //
+// SECTION ADDITIONAL-SERVICES
+// //
+
+.additional-services {
+  background-color: $section-color;
+  font-size: 1.5rem;
+  h2 {
+    margin: 10px 0 20px 0;
+  }
+  h3 {
+    margin: 15px 0 15px 0;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  .description {
+    min-height: 90px;
+  }
+  a {
+    text-decoration: none;
+    color: $logo-brown-color;
+    font-weight: bold;
+  }
+  .filter-logo-brown-color {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(44%) saturate(5831%)
+      hue-rotate(354deg) brightness(86%) contrast(79%);
+    height: 2.8rem;
+  }
+}
+
+// //
+// SECTION WHY US
+// //
+
+.why-us {
+  h2 {
+    margin-bottom: 80px;
+  }
+
+  h3 {
+    padding: 15px 0 15px 0;
+    font-size: 2.2rem;
+  }
+}
+// POWTÓRZONA KLASA - FIX
+.filter-logo-brown-color {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(44%) saturate(5831%)
+    hue-rotate(354deg) brightness(86%) contrast(79%);
+  height: 5em;
+}
+
+// OPINIE
+
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px #2e2e2e;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+.reviews__box-img {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3em;
+  color: #a3625e;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 18%);
+}
+
+// footer
+
+.about-us-footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: $section-color;
+}
+
+footer {
+  padding: 3em 1em;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.footer-list-item {
+  list-style: none;
+  padding: 5px;
+  .link {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+  .link:hover {
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+}
+
+// SECTION IMAGE TUNNEL
+
+.hero-tunnel {
+  position: relative;
+
+  .hero-img-tunnel {
+    padding: 15em;
+    margin-top: 3em;
+    background-size: cover;
+    background-image: url(../img/backgrounds/cartunel.webp);
+    filter: brightness(60%);
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    z-index: -1;
+  }
+  .hero-txt-tunnel {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    bottom: 35%;
+    left: 50%;
+    width: 90%;
+
+    h2 {
+      text-align: center;
+      font-size: 5rem;
+      color: $logo-yellow-color;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-family: 'Adumu';
+      src: url('../db.onlinewebfonts.com/t/6be8b78f5eaa571c3fbf3a1908515cf6.eot');
+      @media screen and (max-width: 576px) {
+        font-size: 3rem;
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
